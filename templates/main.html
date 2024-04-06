@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный профиль</title>
+    <link href="{% static 'css/uikit.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/uikit.min.js' %}"></script>
+    <script src="{% static 'js/uikit-icons.min.js' %}"></script>
+</head>
+<body>
+    <!-- Хедер -->
+    <div class="uk-background-secondary uk-padding">
+        <h1 class="uk-light uk-heading-hero link" onclick="window.location.href='/museums'" style="cursor: pointer; color: white;">Музей Республики Хакасия</h1>
+    </div>
+ <div class="uk-overlay uk-position-center uk-light uk-width-1-2">
+        <!-- Информация о пользователе -->
+        <div class="uk-margin-bottom">
+            <h3 class="uk-heading-medium awd" style="color: black; ">Информация о пользователе</h3>
+            <p style="color: black;"><strong>Логин:</strong> {{ data }}</p>
+            <p style="color: black;"><strong>Имя:</strong> Никита</p>
+            <p style="color: black;"><strong>Email:</strong> Sh1sh@mail.ru</p>
+            <p style="color: black;"><strong>Телефон:</strong> +7 000 000 0000</p>
+        </div>
+
+        <!-- Кнопка для изменения пароля -->
+        <div class="uk-margin-bottom">
+            <h3 style="color: black;" class="uk-heading-medium buttonSend" >Изменение пароля</h3>
+            <button style="color: black;border: 1px solid black" class="uk-button uk-button-primary" >Изменить пароль</button>
+        </div>
+
+        <!-- Список последних посещений музея -->
+        <div>
+            <h3 class="uk-heading-medium">Последние посещения музея</h3>
+            <ul class="uk-list">
+                <li>Музей Республики Хакасия - 2024-04-01</li>
+                <li>Музей истории и культуры Хакасии - 2024-03-25</li>
+                <li>Музей народного искусства Хакасии - 2024-03-15</li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static 'js/uikit.min.js' %}"></script>
+
+</body>
+</html>
+
+
